@@ -1,4 +1,15 @@
 //digital clock
+const currentDateParagraph = document.getElementById("current-date");
+const date = new Date();
+const day = date.getDate();
+const month = date.toLocaleString('default', { month:'long'});
+const year = date.getFullYear();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+
+const formattedDate = `${day} ${month} ${year}`;
+currentDateParagraph.textContent = formattedDate;
+
 function setOra(){
   let data = new Date();
   let ore = data.getHours();
